@@ -1,0 +1,23 @@
+<form [formGroup]="signUpForm">
+    <h2>Sign Up</h2>
+    <div class="form-group">
+      <label for="email">Name</label>
+      <input type="text" class="form-control" id="name" formControlName="email" #nameSignup/>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="email" formControlName="email" #emailSignup/>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" formControlName="email" #passwordSignup/>
+    </div>
+    <div class="form-group">
+      <label for="password">Password again</label>
+      <input type="password" class="form-control" id="passwordagain" formControlName="password" #passwordAgainSignup/>
+    </div>
+    <button type="button" class="btn btn-primary" (click)="auth.signUp(nameSignup.value,emailSignup.value,passwordSignup.value,passwordAgainSignup.value)">Sign Up</button>
+    <span><a routerLink="/login">Have an account?</a></span>
+  </form>
+  
+  
