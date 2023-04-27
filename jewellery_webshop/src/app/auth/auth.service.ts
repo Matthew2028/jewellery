@@ -58,7 +58,7 @@ export class AuthService {
         }
         case "auth/invalid-password":
         {
-           alert("Nem megfelelő jelszó: legalább 6 karakter.");
+           alert("Nem megfelelő jelszó!");
            break;
         }
            default:
