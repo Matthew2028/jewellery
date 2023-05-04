@@ -1,17 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { FirebaseService } from '../../services/firebase.service';
 import { FormControl, FormGroup } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 import { User } from 'src/app/models/user';
-import { AuthService } from 'src/app/auth/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.scss']
+  styleUrls: ['./register.component.scss'],
 })
 export class RegisterComponent implements OnInit {
-
   users: Array<User> = [];
   public signUpForm = new FormGroup({
     email: new FormControl(''),
@@ -22,7 +21,7 @@ export class RegisterComponent implements OnInit {
     password: new FormControl('')
   })
   public isSignedIn = false
-  constructor(public auth : AuthService, public firebaseService : FirebaseService, private router: Router) { }
+  constructor(public firebaseService : FirebaseService, private router: Router) { }
 
   ngOnInit(): void {
     if(sessionStorage.getItem('user')!== null)

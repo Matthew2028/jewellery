@@ -1,14 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { MainComponent } from './pages/main/main.component';
+import { ShopComponent } from './pages/shop/shop.component';
 import { RegisterComponent } from './pages/register/register.component';
-import { LoginComponent } from './pages/login/login.component';
+import { LogoutComponent } from './pages/logout/logout.component';
+import { AuthGuard } from './auth/auth.guard';
 
 const routes: Routes = [
-  {path:"", component:MainComponent},
-  {path:"home", component:MainComponent},
-  {path:"register", component:RegisterComponent},
-  {path:"login", component:LoginComponent}
+  { path: '', component: MainComponent },
+  { path: 'home', component: MainComponent },
+  { path: 'shop', component: ShopComponent, canActivate: [AuthGuard] },
+  { path: 'register', component: RegisterComponent },
+  { path: 'logout', component: LogoutComponent, canActivate: [AuthGuard]}
 ];
 
 @NgModule({

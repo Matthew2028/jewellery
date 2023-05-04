@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Send+Flowers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+$main-color: #d0b6a8;
+$second-color-w: #be7f7f;
+$second-color-d: #a77550;
+$dark-color: #634a30;
+$white-color: #FFF7F0;
+
+$primary-font: 'Send Flowers', cursive;
+$second-font: 'Montserrat', sans-serif;
+$third-font: 'Roboto', sans-serif;
+
+$box-shadow: 4px 6px 15px -9px rgba(0, 0, 0, 0.184);
+$box-shadow2: 1px 1px 21px -9px rgba(0, 0, 0, 0.184);
+
+*{
+    margin: 0px;
+    padding: 0px;
+    all: none;
+    html,body{
+        height: 100%;
+    }
+}

@@ -1,0 +1,31 @@
+@import '../../../styles.scss';
+.logout{
+    background-color:$second-color-w;
+    font-family: $primary-font;
+    padding: 20% 40%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    button{
+        background: rgba(255, 255, 255, 0.37);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: $white-color;
+        padding: 20px;
+    }
+    button:hover{
+        background: #fff;
+        color: $dark-color;
+        cursor: pointer;
+    }
+}
+@media (max-width: 1000px) {
+    .logout{
+        padding: 30% 30%;
+        p{
+            font-size: 2em !important;
+        }
+    }
+
+}  

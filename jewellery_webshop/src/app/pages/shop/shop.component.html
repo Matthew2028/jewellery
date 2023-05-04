@@ -1,0 +1,46 @@
+<div class="shop">
+    <div class="show">
+      <button (click)="showAll()">ALL</button>
+      <button (click)="showDekor()">CSAK DEKOR</button>
+      <button (click)="showPrice()">4000 > RENDEZVE</button>
+    </div>
+      <div class="products">
+        <mat-grid-list [cols]="mybreakpoint" [gutterSize]="'30px'" rowHeight="4:4" (window:resize)="handleSize($event)">
+              <ng-container *ngFor='let product of products'>
+                  <mat-grid-tile class="product" >
+                      <div class="item" >
+                        <p id="id">{{product.id}}</p>
+                        <img data-aos="flip-left"  data-aos-duration="1000" src={{product.kep}}/>
+                        <p   id="nev">{{product.nev}}</p>
+                        <p  id="ar">{{product.ar | format}}</p><br>
+                        <button mat-button (click)="addToChart($event, product)">KOSÁRBA</button>
+                      </div>
+                  </mat-grid-tile>
+              </ng-container>
+          </mat-grid-list>
+  
+      </div>  
+       <div class="crud" >
+         <h1>Adatbázis frissítése</h1>
+            <form [formGroup]="this.formCreate">
+              <input placeholder="Nev" formControlName="newNev" type="text" class="input-field col s12" />
+              <input placeholder="Ar" formControlName="newAr" type="text" class="input-field col s12" />
+              <input placeholder="Kep" formControlName="newKep" type="text" class="input-field col s12" />
+              <input placeholder="Kategoria" formControlName="newKat" type="text" class="input-field col s12" />
+              <button (click)="create()">
+                Submit
+              </button>
+            </form>
+            <form [formGroup]="this.formUpdate">
+              <input placeholder="ID" formControlName="updateId" type="text" class="input-field col s12" />
+              <input placeholder="Nev" formControlName="updateNev" type="text" class="input-field col s12" />
+              <input placeholder="Ar" formControlName="updateAr" type="text" class="input-field col s12" />
+              <button (click)='update()'>Update</button>
+            </form>
+            <form [formGroup]="this.formDelete">
+              <input placeholder="ID" formControlName="deleteId" type="text" class="input-field col s12" />
+              <button (click)='delete()'>Delete</button>
+            </form>
+       </div>    
+  </div>
+  

@@ -1,0 +1,109 @@
+@import '../../../styles.scss';
+.log{
+    padding: 30px 0 0 0;
+    .reg, .bej{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: 100%;
+    }
+    .do{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        .mat-card-title{
+            font-family: $primary-font;
+            font-size: 3em;
+            padding: 50px 70px 50px 70px;
+            color: $second-color-d;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            font-family: $third-font;
+            color: $second-color-w;
+            .mat-input-element {
+                padding: 20px;
+                margin: 20px;
+                width: 90%;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+                border: 1px solid rgba(208, 182, 168, 0.144);
+                background: rgba(208, 182, 168, 0.274);
+            }
+        }
+    }
+    .welchome{
+        background-color: $second-color-w;
+        color: $white-color;
+        h2{
+            font-family: $primary-font;
+            font-size: 2em;
+            text-align: center;
+            padding: 110px 70px 50px 70px;
+        }
+        p{
+            text-align: justify;
+            font-family: $third-font;
+            padding: 0px 80px 120px 80px;
+        }
+
+    }
+    .half-containers{
+        flex: 1;
+        padding: 10px 20px;
+    
+    }
+    .cp-button{
+        appearance: none;
+        background-color: transparent;
+        border: 0.125em solid $second-color-w;
+        box-sizing: border-box;
+        color: $dark-color;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 0.7em 2.3em;
+        text-align: center;
+        text-decoration: none;
+        transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+        user-select: none;
+        letter-spacing: 2px;
+        font-family: $second-font;
+        width: 200px;
+        margin-left: 40%;
+        margin-top: 10px;
+    }
+    .cp-button:hover {
+        background-color: $second-color-w;
+        box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+        transform: translateY(-2px);
+       }
+       
+    .cp-button:active {
+        box-shadow: none;
+        transform: translateY(0);
+    }
+}
+@media screen and (max-width: 1720px) {
+    .log{
+        .do{
+            .mat-form-field{
+                margin-left: 20% !important;
+                .mat-input-element {
+                    padding: 10px;
+                    width: 70%;
+                } 
+            }
+            
+        }
+    }
+}
+@media screen and (max-width: 990px) {
+    .log{
+        .reg, .bej{
+            flex-direction: column;
+        }
+    }
+}
