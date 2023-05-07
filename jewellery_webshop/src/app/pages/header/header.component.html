@@ -1,9 +1,6 @@
 <mat-toolbar class="navbar"  [ngClass]="{'navbar-fixed': isFixedNavbar}">
   <div class="container" fxLayout="row wrap" fxLayoutAlign="start center">
      <div class="navbar-mobile-top" fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="start center">
-        <div class="navbar-logo">
-           <a routerLink="/home"><img src="../../assets/icon.png"></a>
-        </div>
         <button mat-icon-button color="accent" class="navbar-toggle" (click)="toggleNavbar()">
            <mat-icon>{{!navbarOpened ? 'menu': 'close'}}</mat-icon>
         </button>
@@ -14,7 +11,7 @@
 
 <a mat-button class="navbartop-btn" routerLink="/shop">Termékek</a>
 
-<a mat-button class="navbartop-btn" routerLink="/shoppingcart">Kosár</a>
+<a mat-button class="navbartop-btn" routerLink="/cart">Kosár</a>
 
 <a *ngIf="!userInfo" mat-button class="navbartop-btn" routerLink="/register">Bejelentkezés</a>
 

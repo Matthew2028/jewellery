@@ -1,14 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Send+Flowers&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-$main-color: #d0b6a8;
-$second-color-w: #be7f7f;
-$second-color-d: #a77550;
-$dark-color: #634a30;
-$white-color: #FFF7F0;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
 
-$primary-font: 'Send Flowers', cursive;
-$second-font: 'Montserrat', sans-serif;
+$dark-color: #22223B; // sötétbordó
+$second-color-d: #969bb6; // szürkés-lila
+$second-color-w: #cfbfcd; // világos-lila
+$main-color: #9c6d63; // bézs
+$white-color: #ffffff; // bézs sárga
+
+
+$primary-font: 'Montserrat', sans-serif;
+$second-font: 'Open Sans', sans-serif;
 $third-font: 'Roboto', sans-serif;
 
 $box-shadow: 4px 6px 15px -9px rgba(0, 0, 0, 0.184);

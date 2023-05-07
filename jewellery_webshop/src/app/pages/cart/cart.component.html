@@ -1,0 +1,25 @@
+<table class="cart">
+    <tbody class="c-items">
+        <tr id="id" data-aos="zoom-in">
+            <th>Név</th>
+            <th>Ár</th>
+        </tr>
+        <tr *ngFor='let product of cart' id="products" data-aos="zoom-in">
+            <td>{{product.nev}}</td>
+            <td>{{product.ar | format}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="sum" data-aos="zoom-in" *ngIf="cart.length > 0">
+    <p> Összesen:</p>
+    <p>{{cartNumber | format}}</p>
+</div>
+
+<div class="order" *ngIf="cart.length > 0">
+    <button (click)="toClear()">Rendelés</button>
+</div>
+
+<div class="sum" data-aos="zoom-in" *ngIf="cart.length === 0">
+    <p>A kosár üres.</p>
+</div>

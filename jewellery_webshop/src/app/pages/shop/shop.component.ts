@@ -67,8 +67,13 @@ export class ShopComponent implements OnInit, Breakpoints {
       this.products = res;
     })
   }
-  showDekor(){
-    this.productServices.getDekor().subscribe((res) => {
+  showRing(){
+    this.productServices.getRing().subscribe((res) => {
+      this.products = res;
+    })
+  }
+  showEarring(){
+    this.productServices.getEarring().subscribe((res) => {
       this.products = res;
     })
   }

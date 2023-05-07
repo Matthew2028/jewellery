@@ -6,11 +6,13 @@ import { ShopComponent } from './pages/shop/shop.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { LogoutComponent } from './pages/logout/logout.component';
 import { AuthGuard } from './auth/auth.guard';
+import { CartComponent } from './pages/cart/cart.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
   { path: 'home', component: MainComponent },
   { path: 'shop', component: ShopComponent, canActivate: [AuthGuard] },
+  { path: 'cart', component: CartComponent, canActivate: [AuthGuard] },
   { path: 'register', component: RegisterComponent },
   { path: 'logout', component: LogoutComponent, canActivate: [AuthGuard]}
 ];

@@ -1,0 +1,119 @@
+@import '../../../styles.scss';
+
+.cart {
+    margin: 250px 50px;
+    display: flex;
+    justify-content: center;
+    background-color: $second-color-w;
+    border-radius: 20px;
+    width: 90%;
+    border-collapse: collapse;
+
+    .c-items {
+        padding: 20px;
+        width: 100%;
+        text-align: center;
+
+        tr {
+            display: flex;
+            justify-content: space-around;
+            color: $white-color;
+            font-family: $second-font;
+
+            th {
+                font-size: 1.7em;
+            }
+
+            td {
+                font-size: 1.5em;
+            }
+
+            th,
+            td {
+                width: 500px;
+                padding: 10px;
+            }
+        }
+    }
+}
+
+.sum {
+    display: flex;
+    justify-content: center;
+    color: $second-color-w;
+    font-family: $second-font;
+    font-size: 2em;
+    p:nth-child(2) {
+        padding-left: 10px;
+    }
+}
+
+.order {
+    margin-bottom: 200px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    button {
+        appearance: none;
+        background-color: transparent;
+        border: 0.125em solid $second-color-w;
+        box-sizing: border-box;
+        color: $second-color-w;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 13px;
+        font-weight: 600;
+        padding: 0.5em 2em;
+        margin-left: 30px;
+        text-align: center;
+        text-decoration: none;
+        transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+        user-select: none;
+        letter-spacing: 2px;
+        font-family: $second-font;
+    }
+
+    button:hover {
+        background-color: $second-color-w;
+        box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+        transform: translateY(-2px);
+        color: $white-color;
+    }
+
+    button:active {
+        box-shadow: none;
+        transform: translateY(0);
+    }
+}
+.ifempty {
+    margin-bottom: 200px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+
+@media screen and (max-width: 530px) {
+    .cart {
+        width: 80%;
+
+        .c-items {
+            padding: 10px;
+
+            tr {
+                th {
+                    font-size: 1.1em;
+                }
+
+                td {
+                    font-size: 1em;
+                }
+
+                th,
+                td {
+                    width: 300px;
+                }
+            }
+        }
+    }
+}

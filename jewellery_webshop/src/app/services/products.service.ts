@@ -5,9 +5,6 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { Plugins } from '@capacitor/core';
 
 import firebase from "firebase/compat/app";
-import { ShopComponent } from '../pages/shop/shop.component';
-import { FormControl, FormGroup } from '@angular/forms';
-import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
 const { Storage } = Plugins;
 import { Product } from '../models/product';
@@ -37,11 +34,14 @@ export class ProductsService {
     return this.productsCollection.valueChanges({idField: "id" } );
   }
 
-  getDekor()  {
-    return this.asf.collection('jewelerryshop', ref => ref.where('kategoria', '==', "dekor")).valueChanges();
+  getRing()  {
+    return this.asf.collection('jewelerryshop', ref => ref.where('kat', '==', "ring")).valueChanges();
+  }
+  getEarring()  {
+    return this.asf.collection('jewelerryshop', ref => ref.where('kat', '==', "earring")).valueChanges();
   }
   getPrice()  {
-    return this.asf.collection('jewelerryshop', ref => ref.where('ar', '>', 4000).orderBy('ar')).valueChanges();
+    return this.asf.collection('jewelerryshop', ref => ref.where('ar', '>', 50000).orderBy('ar')).valueChanges();
   }
 
   addToChart(product: any) {

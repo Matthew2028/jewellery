@@ -26,6 +26,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
+import {MatInputModule} from '@angular/material/input';
+import { CartComponent } from './pages/cart/cart.component';
+
 
 @NgModule({
   declarations: [
@@ -36,6 +39,7 @@ import { HttpClientModule } from '@angular/common/http';
     LogoutComponent,
     ShopComponent,
     FormatPipe,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,6 +51,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatFormFieldModule,
     MatToolbarModule,
     MatIconModule,
+    MatInputModule,
     MatButtonModule,
     AngularFireAuthModule,
     HttpClientModule,

@@ -1,8 +1,8 @@
 <div class="shop">
     <div class="show">
-      <button (click)="showAll()">ALL</button>
-      <button (click)="showDekor()">CSAK DEKOR</button>
-      <button (click)="showPrice()">4000 > RENDEZVE</button>
+      <button (click)="showAll()">Minden termék</button>
+      <button (click)="showRing()">Gyűrűk</button>
+      <button (click)="showEarring()">Fülbevalók</button>
     </div>
       <div class="products">
         <mat-grid-list [cols]="mybreakpoint" [gutterSize]="'30px'" rowHeight="4:4" (window:resize)="handleSize($event)">
@@ -23,23 +23,21 @@
        <div class="crud" >
          <h1>Adatbázis frissítése</h1>
             <form [formGroup]="this.formCreate">
-              <input placeholder="Nev" formControlName="newNev" type="text" class="input-field col s12" />
-              <input placeholder="Ar" formControlName="newAr" type="text" class="input-field col s12" />
-              <input placeholder="Kep" formControlName="newKep" type="text" class="input-field col s12" />
+              <input placeholder="Termék neve" formControlName="newNev" type="text" class="input-field col s12" />
+              <input placeholder="Ár" formControlName="newAr" type="text" class="input-field col s12" />
+              <input placeholder="Kép" formControlName="newKep" type="text" class="input-field col s12" />
               <input placeholder="Kategoria" formControlName="newKat" type="text" class="input-field col s12" />
-              <button (click)="create()">
-                Submit
-              </button>
+              <button (click)="create()">Bevitel</button>
             </form>
             <form [formGroup]="this.formUpdate">
               <input placeholder="ID" formControlName="updateId" type="text" class="input-field col s12" />
               <input placeholder="Nev" formControlName="updateNev" type="text" class="input-field col s12" />
               <input placeholder="Ar" formControlName="updateAr" type="text" class="input-field col s12" />
-              <button (click)='update()'>Update</button>
+              <button (click)='update()'>Frissít</button>
             </form>
             <form [formGroup]="this.formDelete">
               <input placeholder="ID" formControlName="deleteId" type="text" class="input-field col s12" />
-              <button (click)='delete()'>Delete</button>
+              <button (click)='delete()'>Törlés</button>
             </form>
        </div>    
   </div>

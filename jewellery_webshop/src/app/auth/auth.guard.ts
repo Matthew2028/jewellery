@@ -14,7 +14,7 @@ export class AuthGuard implements CanActivate {
     if(this.authService.isAuthenticated()){
       return true;
     }else{
-      alert("Jelentkezz be!")
+      alert("Bejelentkezés után tekinthető meg!")
       return false;
     }
   }
